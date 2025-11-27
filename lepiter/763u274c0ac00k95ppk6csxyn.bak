@@ -168,7 +168,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T00:00:38.594586-03:00"
+						"dateAndTimeString" : "2025-11-27T00:00:36.024536-03:00"
 					}
 				},
 				"uid" : {
@@ -178,7 +178,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Creacion de clases y de variables de instancia a traves de script, por si se debe clonar el repositorio nuevaeamente (En ese caso, recordar crear accesores)"
+				"string" : "Creacion de clases y de variables de instancia a traves de script, por si se debe clonar el repositorio nuevaeamente (En ese caso, recordar c)"
 			},
 			{
 				"__type" : "pharoSnippet",

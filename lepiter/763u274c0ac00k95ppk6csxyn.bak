@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T22:57:22.144516-03:00"
+						"dateAndTimeString" : "2025-11-27T23:33:15.935988-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "1du6T+sADgCi64dKCTv5NA=="
 				},
-				"code" : "Object subclass: #ActionWorkflow\n    instanceVariableNames: 'repoOwner repoName workflowName versions rawJson'\n    classVariableNames: ''\n    package: 'Tarea-Model'."
+				"code" : "Object subclass: #ActionWorkflow\n    instanceVariableNames: 'repoOwner repoName workflowName versions rawJson'\n    classVariableNames: ''\n    package: 'GtSecurityMsr'."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -560,7 +560,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T23:18:31.820718-03:00"
+						"dateAndTimeString" : "2025-11-27T23:18:55.345843-03:00"
 					}
 				},
 				"uid" : {
@@ -570,7 +570,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Mpapeado de datos a objeto workflow"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -597,7 +597,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T23:18:38.752512-03:00"
+						"dateAndTimeString" : "2025-11-27T23:18:47.94409-03:00"
 					}
 				},
 				"uid" : {
@@ -631,7 +631,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T23:18:19.180335-03:00"
+						"dateAndTimeString" : "2025-11-27T23:18:52.689687-03:00"
 					}
 				},
 				"uid" : {
@@ -641,7 +641,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Mpapeado de datos a objeto workflow\ny un metodo inspect mas compatible, con manejo de errores"
+				"string" : "Un metodo inspect mas compatible, con manejo de errores"
 			},
 			{
 				"__type" : "pharoSnippet",

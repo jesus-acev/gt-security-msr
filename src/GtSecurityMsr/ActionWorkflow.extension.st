@@ -13,6 +13,12 @@ ActionWorkflow >> baseRectangleSize [
 ]
 
 { #category : #'*GtSecurityMsr' }
+ActionWorkflow class >> fromDictionaries: aCollectionOfDicts [
+    "Devuelve una colección de ActionWorkflow a partir de una colección de diccionarios JSON (ya parseados)."
+    ^ aCollectionOfDicts collect: [ :dict | self fromJson: dict ]
+]
+
+{ #category : #'*GtSecurityMsr' }
 ActionWorkflow class >> fromJson: jsonDict [
     | aw history |
     aw := self new.
@@ -31,7 +37,7 @@ ActionWorkflow class >> fromJson: jsonDict [
 ActionWorkflow >> gtViewVersionRectsOn1: aView [
     <gtView>
     ^ aView explicit
-        title: 'Rectángulos por versión1';
+        title: 'Rectángulos por versión(Final)';
         stencil: [ self visualizeVersionsAsRectanglesInView: aView ]
 ]
 
@@ -39,7 +45,7 @@ ActionWorkflow >> gtViewVersionRectsOn1: aView [
 ActionWorkflow >> gtViewVersionRectsOn: aView [
     <gtView>
     ^ aView explicit
-        title: 'Rectángulos por versión';
+        title: 'Rectángulos por versión (Primera version)';
         stencil: [ self visualizeVersionsAsRectangles]
 ]
 
@@ -206,19 +212,30 @@ ActionWorkflow >> visualizeVersionsAsRectangles [
 
 { #category : #'*GtSecurityMsr' }
 ActionWorkflow >> visualizeVersionsAsRectanglesInView: aView [
-    | container color scale baseSize |
-    container := BlElement new
-        layout: BlFlowLayout horizontal;
-        constraintsDo: [ :c |
-            c horizontal fitContent.
-            c vertical fitContent ];
-        padding: (BlInsets all: 20);
+    "Visualiza cada versión como un cuadrado, acomodados de izquierda a derecha;
+    al llegar al límite derecho, pasa a otra fila más abajo (horizontal row wrap).
+    Incluye zoom y pan."
+
+    | mainContainer currentX currentY maxRowHeight maxX scale baseSize zoomableContainer |
+    mainContainer := BlElement new
         background: Color white;
+        size: 3000 @ 1300;  "Tamaño base, puedes ajustar"
+        clipChildren: false;
         yourself.
 
-    color := self visualizeColor.
-    scale := self rectangleScaleFactor.
-    baseSize := self baseRectangleSize.
+    "Componente zoom y pan"
+    zoomableContainer := BlZoomableElement new
+        size: 1600 @ 800;
+        clipChildren: false;
+        contentElement: mainContainer;
+        yourself.
+
+    scale := self rectangleScaleFactor.      "Por ejemplo, 30"
+    baseSize := self baseRectangleSize.      "Por ejemplo, 10"
+    maxX := 2400.       "Límite derecho, ajusta según pantalla"
+    currentX := 20.
+    currentY := 20.
+    maxRowHeight := 0.
 
     self versions do: [ :v |
         | vulnCount size squareElement label1 label2 |
@@ -228,24 +245,23 @@ ActionWorkflow >> visualizeVersionsAsRectanglesInView: aView [
         squareElement := BlElement new
             geometry: BlRectangleGeometry new;
             size: size @ size;
-            background: color;
+            background: self visualizeColor;
             border: (BlBorder paint: Color black width: 2);
-            margin: (BlInsets all: 8);
             yourself.
 
         label1 := BlTextElement new
             text: (('Versión: ', v timestampString) asRopedText
-                fontSize: 13; foreground: Color white; bold);
+                fontSize: 12; foreground: Color white; bold);
             yourself.
         label2 := BlTextElement new
             text: (('# Vulnerabilidades: ', vulnCount asString) asRopedText
-                fontSize: 13; foreground: Color white; bold);
+                fontSize: 12; foreground: Color white; bold);
             yourself.
 
         squareElement addChild: label1.
         label1 relocate: 6 @ 6.
         squareElement addChild: label2.
-        label2 relocate: 6 @ (size - 24 max: 6).
+        label2 relocate: 6 @ (size - 22 max: 6).
 
         squareElement addEventHandler: (BlEventHandler
             on: BlMouseEnterEvent
@@ -256,15 +272,35 @@ ActionWorkflow >> visualizeVersionsAsRectanglesInView: aView [
         squareElement addEventHandler: (BlEventHandler
             on: BlClickEvent
             do: [ :evt |
-                (aView respondsTo: #setObject:) 
-                    ifTrue: [ aView setObject: v ] 
+                (aView respondsTo: #setObject:)
+                    ifTrue: [ aView setObject: v ]
                     ifFalse: [ squareElement phlow spawnObject: v ].
                 evt consumed: true ]).
 
-        container addChild: squareElement.
+        "==== Posicionamiento manual fila-horizontales ===="
+        squareElement relocate: currentX @ currentY.
+        "Actualiza el máximo alto en la fila"
+        maxRowHeight := maxRowHeight max: size.
+
+        "Avanza a la derecha"
+        currentX := currentX + size + 20.
+
+        "¿Saltamos de fila? Si pasamos del borde derecho"
+        (currentX + size > maxX) ifTrue: [
+            currentX := 20.                       "Volvemos a la izquierda"
+            currentY := currentY + maxRowHeight + 22.  "Bajamos"
+            maxRowHeight := 0.
+        ].
+        "==== Fin del posicionamiento fila-horizontal ===="
+
+        mainContainer addChild: squareElement.
     ].
 
-    ^ container
+    "Ajusta el tamaño del contenedor grande si quieres (opcional)"
+    mainContainer size: (maxX + 100) @ (currentY + maxRowHeight + 80).
+
+    "Permite pan y zoom"
+    ^ zoomableContainer asPannableElement
 ]
 
 { #category : #'*GtSecurityMsr' }

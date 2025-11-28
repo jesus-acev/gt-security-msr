@@ -66,82 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T21:27:24.858007-03:00"
+						"dateAndTimeString" : "2025-11-27T22:40:16.182787-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "U7rXLOAADgCcQuFZD4UaeQ=="
 				},
-				"code" : "baseDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' / 'aws-actions' .\n"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T09:36:04.884462-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:45:00.337094-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VLR0YOAADgCcka7VD4UaeQ=="
-				},
-				"code" : "allJsonFiles := baseDirectory allChildrenMatching: '*.json'."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T09:36:35.657513-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:46:34.582653-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "okNKYuAADgCcnKAID4UaeQ=="
-				},
-				"code" : "parsedData := allJsonFiles collect: [ :jsonFile |\n    STONJSON fromString: jsonFile contents\n]."
+				"code" : "baseDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' \r/ 'armbian/build' .\n\rallJsonFiles := baseDirectory allChildrenMatching: '*.json'.\rparsedData := allJsonFiles collect: [ :jsonFile |\n    STONJSON fromString: jsonFile contents\n]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -205,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:30:03.164713-03:00"
+						"dateAndTimeString" : "2025-11-27T22:57:22.144516-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "1du6T+sADgCi64dKCTv5NA=="
 				},
-				"code" : "Object subclass: #ActionWorkflow\n    instanceVariableNames: 'repoOwner repoName workflowName versions'\n    classVariableNames: ''\n    package: 'Tarea-Model'\n"
+				"code" : "Object subclass: #ActionWorkflow\n    instanceVariableNames: 'repoOwner repoName workflowName versions rawJson'\n    classVariableNames: ''\n    package: 'Tarea-Model'."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -239,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:01:24.238395-03:00"
+						"dateAndTimeString" : "2025-11-27T20:18:37.101434-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uL/2a+sADgCj02hbCTv5NA=="
 				},
-				"code" : "Object subclass: #VersionRecord\n    instanceVariableNames: 'timestamp vulnCount rawData'\n    classVariableNames: ''\n    package: 'Tarea-Model'.\n"
+				"code" : "Object subclass: #VersionRecord\n    instanceVariableNames: 'timestampString vulnCount rawData'\n    classVariableNames: ''\n    package: 'Tarea-Model'."
 			},
 			{
 				"__type" : "textSnippet",
@@ -262,7 +194,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:56:15.321817-03:00"
+						"dateAndTimeString" : "2025-11-27T22:40:40.598804-03:00"
 					}
 				},
 				"editEmail" : {
@@ -273,7 +205,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:56:45.442425-03:00"
+						"dateAndTimeString" : "2025-11-27T22:40:40.598804-03:00"
 					}
 				},
 				"uid" : {
@@ -283,7 +215,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Lectura de los datos parseados con las caracteristicas mapeadas y las metricas"
+				"string" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -310,14 +242,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T23:45:14.595657-03:00"
+						"dateAndTimeString" : "2025-11-27T22:40:59.486472-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "+fqqq+sADgCk8CrACTv5NA=="
 				},
-				"code" : "workflows := parsedData collect: [ :dict |\n    ActionWorkflow fromJson: dict\n].\n"
+				"code" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -460,6 +392,324 @@
 					"uidString" : "qlbeauwADgCpEi7tCTv5NA=="
 				},
 				"code" : "(workflows first) versionCount"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:40:50.682577-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:40:52.096946-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BFfUdP8ADgCPxygvC4sfYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Lectura de los datos parseados con las caracteristicas mapeadas y las metricas"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:40:55.029049-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:17:55.355868-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kKkWdf8ADgCPzcjbC4sfYg=="
+				},
+				"code" : "baseDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' \r/ 'armbian/build' .\n\rallJsonFiles := baseDirectory allChildrenMatching: '*.json'.\rparsedData := allJsonFiles collect: [ :jsonFile |\n    STONJSON fromString: jsonFile contents\n]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:41:32.886103-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:14:52.899249-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vFBYd/8ADgCP4+0DC4sfYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Constructor de la clase ActionWorkflows para asignar desde un directorio, los archivos .json para mostrar"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T20:24:37.913942-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:42:23.095748-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nMmxjf0ADgCON4SEC4sfYg=="
+				},
+				"code" : "workflows := ActionWorkflow loadAllFromDirectory: baseDirectory."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:18:31.820718-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:18:55.345843-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aZKa+/8ADgCcozaeC4sfYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Mpapeado de datos a objeto workflow"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:18:37.139228-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:18:47.94409-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YLnr+/8ADgCcpNxfC4sfYg=="
+				},
+				"code" : "workflows := parsedData collect: [ :dict |\n    ActionWorkflow fromJson: dict\n]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:14:26.940594-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:18:52.689687-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qZK07P8ADgCZYMLcC4sfYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Un metodo inspect mas compatible, con manejo de errores"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T20:25:19.999383-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T20:49:37.567626-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1PUzkP0ADgCOPgPwC4sfYg=="
+				},
+				"code" : "workflows isEmpty\n    ifTrue: [ self inform: 'No se encontraron JSONs en el directorio.' ]\n    ifFalse: [\n        \"Abrir inspector de la colección para ver la vista 'Rectángulos por versión (colección)'\"\n        workflows inspect.\n    ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T22:44:45.534369-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:14:45.018363-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BeXTgv8ADgCTfWlFC4sfYg=="
+				},
+				"code" : ""
 			}
 		]
 	},

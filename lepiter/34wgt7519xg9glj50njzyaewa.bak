@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:54:32.963662-03:00"
+						"dateAndTimeString" : "2025-11-27T23:02:00.582403-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sT/Nd+sADgCj6d6qCTv5NA=="
 				},
-				"code" : "testDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' / 'aws-actions'."
+				"code" : "testDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' / 'aws-actions'.\r\rfiles := testDirectory allChildrenMatching: '*.json'.\rparsedData := files collect: [ :f | STONJSON fromString: f contents ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:54:47.875032-03:00"
+						"dateAndTimeString" : "2025-11-27T23:02:07.904869-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "RdBbiOsADgCkMBU6CTv5NA=="
 				},
-				"code" : "files := testDirectory allChildrenMatching: '*.json'."
+				"code" : "workflows := parsedData collect: [ :dict | ActionWorkflow fromJson: dict ].\r\n"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -134,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:54:57.161582-03:00"
+						"dateAndTimeString" : "2025-11-27T23:02:20.237084-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jxpciesADgCkXrRUCTv5NA=="
 				},
-				"code" : "parsedData := files collect: [ :f | STONJSON fromString: f contents ]."
+				"code" : "workflows := ActionWorkflow loadAllFromDirectory: baseDirectory."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -168,14 +168,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:55:08.763541-03:00"
+						"dateAndTimeString" : "2025-11-27T23:02:22.741017-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "IAIOiusADgCkZJztCTv5NA=="
 				},
-				"code" : "workflows := parsedData collect: [ :dict | ActionWorkflow fromJson: dict ].\n"
+				"code" : ""
 			}
 		]
 	},

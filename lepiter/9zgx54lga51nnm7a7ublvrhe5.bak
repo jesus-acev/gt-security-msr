@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T01:40:43.753857-03:00"
+						"dateAndTimeString" : "2025-11-27T12:13:46.330524-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T01:57:56.613379-03:00"
+						"dateAndTimeString" : "2025-11-27T12:13:46.330524-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uMl2vNkADgCZwIr1D4UaeQ=="
+					"uidString" : "uEk+svYADgC21sgwA9GpqA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "En esta seccion se haran indices"
+				"string" : ""
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T02:05:04.365454-03:00"
+						"dateAndTimeString" : "2025-11-27T12:14:07.492929-03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T23:01:35.295044-03:00"
+						"dateAndTimeString" : "2025-11-27T12:14:10.537206-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EFbpEtoADgCb3HcrD4UaeQ=="
+					"uidString" : "ezOBs/YADgC21+o+A9GpqA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+				"code" : "Object subclass: #RepoOwner\n    instanceVariableNames: 'name repos'\n    classVariableNames: ''\n    poolDictionaries: ''\n    category: 'SecurityModel'.\n"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
 				},
-				"string" : "El lugar donde se han construido las clases y metodos\n\t[[Creando clases]]\nDonde se puede practicar con las clases y constructores, y ejecutar el analisis\n\t[[El patio de juegos]]\n"
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T12:14:15.54652-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-27T23:16:05.790225-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8Bb8s/YADgC24QUaA9GpqA=="
+				},
+				"code" : ""
 			}
 		]
 	},
@@ -88,7 +119,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-11-26T01:41:03.371888-03:00"
+			"dateAndTimeString" : "2025-11-27T12:13:50.102648-03:00"
 		}
 	},
 	"editEmail" : {
@@ -99,15 +130,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-11-26T01:41:03.371888-03:00"
+			"dateAndTimeString" : "2025-11-27T12:13:50.102648-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Security home"
+		"title" : "CC2"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "57e675bc-d900-0e00-99bf-9a650f851a79"
+		"uuid" : "cdb33db2-f600-0e00-b6d5-d84103d1a9a8"
 	}
 }

@@ -1,15 +1,16 @@
-Class {
-	#name : #ActionWorkflow,
-	#superclass : #Object,
-	#instVars : [
-		'repoOwner',
-		'repoName',
-		'workflowName',
-		'versions',
-		'rawJson'
-	],
-	#category : #'GtSecurityMsr-Model'
-}
+Extension { #name : #ActionWorkflow }
+
+{ #category : #'*GtSecurityMsr' }
+ActionWorkflow >> addVersion: aVersionRecord [
+    versions add: aVersionRecord
+
+]
+
+{ #category : #'*GtSecurityMsr' }
+ActionWorkflow >> baseRectangleSize [
+    "Tamaño mínimo visible para vulnerabilidades = 0."
+    ^ 10    "¡Ahora es 10!"
+]
 
 { #category : #'*GtSecurityMsr' }
 ActionWorkflow class >> fromJson: jsonDict [
@@ -24,29 +25,6 @@ ActionWorkflow class >> fromJson: jsonDict [
         aw addVersion: (VersionRecord fromTimestampString: timestamp json: data)
     ].
     ^ aw
-]
-
-{ #category : #'*GtSecurityMsr' }
-ActionWorkflow class >> loadAllFromDirectory: baseDirectory [
-    | files |
-    files := baseDirectory allChildrenMatching: '*.json'.
-    ^ files collect: [ :jsonFile |
-        | dict |
-        dict := STONJSON fromString: jsonFile contents.
-        self fromJson: dict
-    ]
-]
-
-{ #category : #'*GtSecurityMsr' }
-ActionWorkflow >> addVersion: aVersionRecord [
-    versions add: aVersionRecord
-
-]
-
-{ #category : #'*GtSecurityMsr' }
-ActionWorkflow >> baseRectangleSize [
-    "Tamaño mínimo visible para vulnerabilidades = 0."
-    ^ 10    "¡Ahora es 10!"
 ]
 
 { #category : #'*GtSecurityMsr' }
@@ -75,6 +53,17 @@ ActionWorkflow >> hasManyVersions [
 ActionWorkflow >> initialize [
     super initialize.
     versions := OrderedCollection new.
+]
+
+{ #category : #'*GtSecurityMsr' }
+ActionWorkflow class >> loadAllFromDirectory: baseDirectory [
+    | files |
+    files := baseDirectory allChildrenMatching: '*.json'.
+    ^ files collect: [ :jsonFile |
+        | dict |
+        dict := STONJSON fromString: jsonFile contents.
+        self fromJson: dict
+    ]
 ]
 
 { #category : #'*GtSecurityMsr' }

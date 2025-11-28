@@ -1,13 +1,4 @@
-Class {
-	#name : #VersionRecord,
-	#superclass : #Object,
-	#instVars : [
-		'timestampString',
-		'vulnCount',
-		'rawData'
-	],
-	#category : #'GtSecurityMsr-Model'
-}
+Extension { #name : #VersionRecord }
 
 { #category : #'*GtSecurityMsr' }
 VersionRecord class >> fromTimestampString: timestamp json: jsonDict [

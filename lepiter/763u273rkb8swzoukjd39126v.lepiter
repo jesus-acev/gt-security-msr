@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T22:08:50.406676-03:00"
+						"dateAndTimeString" : "2025-11-28T22:22:52.016385-03:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "El lugar donde se han construido las clases y metodos\n\t[[Creando clases]]\nDonde se puede practicar con las clases y constructores, y ejecutar el analisis\n\t[[El patio de juegos]]\n\n\t\n"
+				"string" : "El lugar donde se han construido las clases y metodos\n\t[[Creando clases]]\nDonde se puede practicar con las clases y constructores, y ejecutar el analisis\n\t[[El patio de juegos]]\n\t[[Otra ejecucion]]\n\t\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-28T22:28:12.810062-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-28T22:32:54.706437-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gn9/ZRMBDgC/TR+NDiGnTg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#**Modelo de dominio**\nSe crea el modelo ActionWorkflow el cual pose un nombre de organizacion y repositorio, que a su vez esta compuesto de un modelo VersionRecord, con el historial de versiones de un ActionWorkflow, el cual posee versiones del workflow y un numero de vulnerabilidades por cada version (Mostrada con una fecha)\n\nActionWorkflow --> VersionRecord"
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T22:09:14.880069-03:00"
+						"dateAndTimeString" : "2025-11-28T22:32:10.048674-03:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Explicacion de metricas\n\n1) El numero de vulnerabilidades por version, plasmado en el tamaño de cuadrado\n\nAl cargar el modelo ActionWorkflow e inspeccionar un ActionWorkflow, se puede vizualizar \t\t\tcuadrados, que representan las versiones contendidas en un ActionWorkflow, cual cuadrado se hace \t\tmas grande si existen vulnerabilidades en el\n\n2) Para un ActionWorflow, se analiza su numero de versiones con VersionRecord\n\nSon rojos si existen menos de 5 vulnerabilidaes, y verdes si tiene al menos 5 o mas \t\t\tvulnerabilidades\n\t\t\nSi los cuadrados son muy pequeños, es porque tienen 0 vulnerabilidadaes"
+				"string" : "#**Explicacion de metricas**\n\n####1) El numero de vulnerabilidades por version, plasmado en el tamaño de cuadrado\n\nAl cargar el modelo ActionWorkflow e inspeccionar un ActionWorkflow, se puede vizualizar \t\t\tcuadrados, que representan las versiones contendidas en un ActionWorkflow, cual cuadrado se hace \t\tmas grande si existen vulnerabilidades en el\n\n####2) Para un ActionWorflow, se analiza su numero de versiones con VersionRecord\n\nSon rojos si existen menos de 5 vulnerabilidaes, y verdes si tiene al menos 5 o mas \t\t\tvulnerabilidades\n\t\t\nSi los cuadrados son muy pequeños, es porque tienen 0 vulnerabilidadaes."
 			}
 		]
 	},

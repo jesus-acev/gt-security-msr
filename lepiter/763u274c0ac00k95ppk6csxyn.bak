@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T22:40:16.182787-03:00"
+						"dateAndTimeString" : "2025-11-28T22:21:27.376879-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "U7rXLOAADgCcQuFZD4UaeQ=="
 				},
-				"code" : "baseDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' \r/ 'armbian/build' .\n\rallJsonFiles := baseDirectory allChildrenMatching: '*.json'.\rparsedData := allJsonFiles collect: [ :jsonFile |\n    STONJSON fromString: jsonFile contents\n]."
+				"code" : "\"Desde donde sea que estés ejecutando el código\"\nbaseDirectory := '.' asFileReference / 'security_data' / 'consolidated_data' / 'armbian' / 'build'.\n\rallJsonFiles := baseDirectory allChildrenMatching: '*.json'.\rparsedData := allJsonFiles collect: [ :jsonFile |\n    STONJSON fromString: jsonFile contents\n]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -526,14 +526,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T15:09:20.004389-03:00"
+						"dateAndTimeString" : "2025-11-27T22:42:23.095748-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "nMmxjf0ADgCON4SEC4sfYg=="
 				},
-				"code" : "CAcallorkflows := ActionWorkflow loadAllFromDirectory: baseDirectory."
+				"code" : "workflows := ActionWorkflow loadAllFromDirectory: baseDirectory."
 			},
 			{
 				"__type" : "textSnippet",

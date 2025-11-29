@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:49:28.730568-03:00"
+						"dateAndTimeString" : "2025-11-28T22:22:26.415867-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:54:41.496733-03:00"
+						"dateAndTimeString" : "2025-11-28T22:37:35.323331-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6b/ddesADgCj6NfsCTv5NA=="
+					"uidString" : "GvHZUBMBDgCz/YadDiGnTg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Carga para un repositorio especifico de una organizacion"
+				"string" : "#####Una ejecucion, mas compatible, usando asFileReference\nPara un repo especifico, dentro de metodo construtcor para crear modelo, se lee directorio, se convierten archivos a JSON y se parsean a diccionarios"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:50:01.203595-03:00"
+						"dateAndTimeString" : "2025-11-28T22:23:48.92912-03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:39:36.212188-03:00"
+						"dateAndTimeString" : "2025-11-28T22:25:32.915616-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "sT/Nd+sADgCj6d6qCTv5NA=="
+					"uidString" : "ov7EVRMBDgC17vymDiGnTg=="
 				},
-				"code" : "testDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data' \r/ 'armbian/build'.\r\rfiles := testDirectory allChildrenMatching: '*.json'.\rparsedData := files collect: [ :f | STONJSON fromString: f contents ]."
+				"code" : "probandoDirectory := '.' asFileReference / 'security_data' / 'consolidated_data' / 'armbian' / 'build'."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:54:55.778362-03:00"
+						"dateAndTimeString" : "2025-11-28T22:24:11.921474-03:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T21:58:09.265424-03:00"
+						"dateAndTimeString" : "2025-11-28T22:26:02.000089-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "jxpciesADgCkXrRUCTv5NA=="
+					"uidString" : "gNQjVxMBDgC1/9qWDiGnTg=="
 				},
-				"code" : "aOrganizationWorkflows := ActionWorkflow loadAllFromDirectory: testDirectory."
+				"code" : "aProbandoWorkflows := ActionWorkflow loadAllFromDirectory: probandoDirectory."
 			},
 			{
 				"__type" : "textSnippet",
@@ -123,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:35:55.274366-03:00"
+						"dateAndTimeString" : "2025-11-28T22:27:13.138587-03:00"
 					}
 				},
 				"editEmail" : {
@@ -134,17 +134,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:54:37.461526-03:00"
+						"dateAndTimeString" : "2025-11-28T22:37:55.853153-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AL1LHwsBDgCXFAa4CPsg5w=="
+					"uidString" : "HUq4YRMBDgC75Iu1DiGnTg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "\nCarga para todo el directorio raiz"
+				"string" : "**Es equivalente con usar los metodos de parseo fuera, y cargar los diccionarios para crear el modelo**\n"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -160,7 +160,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-26T22:55:07.437565-03:00"
+						"dateAndTimeString" : "2025-11-28T22:33:11.515029-03:00"
 					}
 				},
 				"editEmail" : {
@@ -171,14 +171,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:42:05.527375-03:00"
+						"dateAndTimeString" : "2025-11-28T22:36:41.965198-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "IAIOiusADgCkZJztCTv5NA=="
+					"uidString" : "yV9NdxMBDgCLTQuXDiGnTg=="
 				},
-				"code" : "\"Directorio raíz, ej: consolidated_data\"\nrootDirectory := FileLocator home / 'Documentos/codeql-demo/tarea-demo/security_data/consolidated_data'.\n\n\"Buscar todos los archivos .json en todas las subcarpetas\"\nallJsonFiles := rootDirectory allChildren select: [ :each | each extension = 'json' ].\n\n\"Parsear cada archivo a un diccionario\"\nparsedData := allJsonFiles collect: [ :jsonFile | STONJSON fromString: jsonFile contents ]."
+				"code" : "probandoDirectory2 := '.' asFileReference / 'security_data' / 'consolidated_data' / 'armbian' / 'build'.\r\rprobandoFiles := probandoDirectory2 allChildrenMatching: '*.json'.\raTestDicts := probandoFiles collect: [ :f | STONJSON fromString: f contents ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-28T22:33:27.784962-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-28T22:36:00.590383-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NaJFeBMBDgCLXowmDiGnTg=="
+				},
+				"code" : "aOrganizationWorkflows := ActionWorkflow fromDictionaries: aTestDicts."
 			},
 			{
 				"__type" : "textSnippet",
@@ -194,7 +228,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:51:22.47249-03:00"
+						"dateAndTimeString" : "2025-11-28T22:38:12.431641-03:00"
 					}
 				},
 				"editEmail" : {
@@ -205,17 +239,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T21:59:27.451671-03:00"
+						"dateAndTimeString" : "2025-11-28T22:38:40.926155-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "hKgLVgsBDgCaQbaWCPsg5w=="
+					"uidString" : "WDBjhRMBDgCOtgbnDiGnTg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Metodo constructor de clase para construir un objeto actionWorkflow desde datos previamente parseados a un diccionario de ActionWorkflow's"
+				"string" : "#####Otra ejecucion, cargando todos desde el directorio root"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -231,7 +265,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:51:17.999844-03:00"
+						"dateAndTimeString" : "2025-11-28T22:37:05.807308-03:00"
 					}
 				},
 				"editEmail" : {
@@ -242,51 +276,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:51:19.695057-03:00"
+						"dateAndTimeString" : "2025-11-28T22:39:01.993933-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SWlLVgsBDgCaQ/1pCPsg5w=="
+					"uidString" : "/2NEhRMBDgCOtGSRDiGnTg=="
 				},
-				"code" : "rootWorkflowsFromDicts := ActionWorkflow fromDictionaries: parsedData."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:52:19.390452-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:54:26.444405-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "XCj0WQsBDgCca+FWCPsg5w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Metodo constructor de clase para crear desde un directorio, un objeto de la clase ActionWorkflow. Este metodo tiene embebidos, los anteriores, primero parsea los archivos de un directorio a JSON y luego parsea el json a una coleccion de diccionarios, para luego leerles."
+				"code" : "probandoRootDirectory := '.' asFileReference / 'security_data' / 'consolidated_data'."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -302,7 +299,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:46:30.03256-03:00"
+						"dateAndTimeString" : "2025-11-28T22:37:01.999394-03:00"
 					}
 				},
 				"editEmail" : {
@@ -313,14 +310,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T21:59:36.784728-03:00"
+						"dateAndTimeString" : "2025-11-28T22:37:01.999394-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EmEhRQsBDgCYilQzCPsg5w=="
+					"uidString" : "wkkKhRMBDgCOspjUDiGnTg=="
 				},
-				"code" : "aRootWorkflows := ActionWorkflow loadAllFromDirectory: rootDirectory."
+				"code" : ""
 			}
 		]
 	},
@@ -332,7 +329,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-11-26T22:49:53.758538-03:00"
+			"dateAndTimeString" : "2025-11-28T22:22:44.000555-03:00"
 		}
 	},
 	"editEmail" : {
@@ -343,15 +340,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-11-26T22:49:53.758538-03:00"
+			"dateAndTimeString" : "2025-11-28T22:22:44.000555-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "El patio de juegos"
+		"title" : "Otra ejecucion"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "ea27dd75-eb00-0e00-a3e7-91db093bf934"
+		"uuid" : "5235d950-1301-0e00-b3fc-10230e21a74e"
 	}
 }

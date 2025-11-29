@@ -11,13 +11,13 @@ Class {
 	#category : #'GtSecurityMsr-Model'
 }
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow class >> fromDictionaries: aCollectionOfDicts [
     "Devuelve una colección de ActionWorkflow a partir de una colección de diccionarios JSON (ya parseados)."
     ^ aCollectionOfDicts collect: [ :dict | self fromJson: dict ]
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow class >> fromJson: jsonDict [
     | aw history |
     aw := self new.
@@ -32,7 +32,7 @@ ActionWorkflow class >> fromJson: jsonDict [
     ^ aw
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow class >> loadAllFromDirectory: baseDirectory [
     | files |
     files := baseDirectory allChildrenMatching: '*.json'.
@@ -43,19 +43,19 @@ ActionWorkflow class >> loadAllFromDirectory: baseDirectory [
     ]
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> addVersion: aVersionRecord [
     versions add: aVersionRecord
 
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> baseRectangleSize [
     "Tamaño mínimo visible para vulnerabilidades = 0."
     ^ 10    "¡Ahora es 10!"
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> gtViewVersionRectsOn1: aView [
     <gtView>
     ^ aView explicit
@@ -63,7 +63,7 @@ ActionWorkflow >> gtViewVersionRectsOn1: aView [
         stencil: [ self visualizeVersionsAsRectanglesInView: aView ]
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> gtViewVersionRectsOn: aView [
     <gtView>
     ^ aView explicit
@@ -71,79 +71,79 @@ ActionWorkflow >> gtViewVersionRectsOn: aView [
         stencil: [ self visualizeVersionsAsRectangles]
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> hasManyVersions [
     "5 o más versiones"
     ^ self versionCount >= 5
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> initialize [
     super initialize.
     versions := OrderedCollection new.
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> rawJson [
     ^ rawJson
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> rawJson: aDict [
     rawJson := aDict
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> rectangleScaleFactor [
     "Ajusta el tamaño sin cambiar la métrica base. Por ejemplo, 10 hace los rectángulos 10x más grandes."
     ^ 35
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> repoName [
     ^ repoName
 
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> repoName: aString [
     repoName := aString
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> repoOwner [
     ^ repoOwner
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> repoOwner: aString [
     repoOwner := aString
 
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> totalVulnerabilities [
     ^ versions sum: [ :v | v vulnCount ]
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> versionCount [
     ^ versions size
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> versions [
     ^ versions
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> visualizeColor [
     ^ self hasManyVersions
         ifTrue: [ Color r: 0.2 g: 0.8 b: 0.2 ]   "Verde"
         ifFalse: [ Color r: 0.9 g: 0.2 b: 0.2 ]  "Rojo"
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> visualizeVersionsAsRectangles [
     "Devuelve un BlElement con un rectángulo por versión:
      - ancho y alto = métrica 1 (vulnerabilidades) escalada por rectangleScaleFactor
@@ -221,7 +221,7 @@ ActionWorkflow >> visualizeVersionsAsRectangles [
     ^ container
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> visualizeVersionsAsRectanglesInView: aView [
     "Visualiza cada versión como un cuadrado, acomodados de izquierda a derecha;
     al llegar al límite derecho, pasa a otra fila más abajo (horizontal row wrap).
@@ -314,13 +314,13 @@ ActionWorkflow >> visualizeVersionsAsRectanglesInView: aView [
     ^ zoomableContainer asPannableElement
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> workflowName [
     ^ workflowName
 
 ]
 
-{ #category : #'*GtSecurityMsr' }
+{ #category : #'as yet unclassified' }
 ActionWorkflow >> workflowName: aString [
     workflowName := aString
 ]

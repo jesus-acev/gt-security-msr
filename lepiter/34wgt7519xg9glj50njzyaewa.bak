@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:35:22.41435-03:00"
+						"dateAndTimeString" : "2025-11-28T12:54:41.496733-03:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Carga para un repositorio especifico de una organizacino"
+				"string" : "Carga para un repositorio especifico de una organizacion"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-27T23:02:47.105887-03:00"
+						"dateAndTimeString" : "2025-11-28T21:58:09.265424-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jxpciesADgCkXrRUCTv5NA=="
 				},
-				"code" : "workflows := ActionWorkflow loadAllFromDirectory: testDirectory."
+				"code" : "aOrganizationWorkflows := ActionWorkflow loadAllFromDirectory: testDirectory."
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,7 +134,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:36:05.924025-03:00"
+						"dateAndTimeString" : "2025-11-28T12:54:37.461526-03:00"
 					}
 				},
 				"uid" : {
@@ -144,7 +144,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Carga para todo el directorio raiz"
+				"string" : "\nCarga para todo el directorio raiz"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -205,7 +205,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:53:01.724458-03:00"
+						"dateAndTimeString" : "2025-11-28T21:59:27.451671-03:00"
 					}
 				},
 				"uid" : {
@@ -215,7 +215,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Metodo constructor de clase para construir un objeto actionWorkflow desde datos ya parseados a un diccionario"
+				"string" : "Metodo constructor de clase para construir un objeto actionWorkflow desde datos previamente parseados a un diccionario de ActionWorkflow's"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -276,7 +276,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:54:10.657417-03:00"
+						"dateAndTimeString" : "2025-11-28T12:54:26.444405-03:00"
 					}
 				},
 				"uid" : {
@@ -286,7 +286,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Metodo constructor de clase para crear desde un directorio, un objeto de la clase ActionWorkflow. Este metodo tiene embebidos, los anteriores, primero parsea los archivos de un directorio a JSON y luego parsea el json a una coleccion de diccionarios."
+				"string" : "Metodo constructor de clase para crear desde un directorio, un objeto de la clase ActionWorkflow. Este metodo tiene embebidos, los anteriores, primero parsea los archivos de un directorio a JSON y luego parsea el json a una coleccion de diccionarios, para luego leerles."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-28T12:54:19.104219-03:00"
+						"dateAndTimeString" : "2025-11-28T21:59:33.672101-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EmEhRQsBDgCYilQzCPsg5w=="
 				},
-				"code" : "rootWorkflows := ActionWorkflow loadAllFromDirectory: rootDirectory."
+				"code" : "arootWorkflows := ActionWorkflow loadAllFromDirectory: rootDirectory."
 			}
 		]
 	},
